@@ -65,7 +65,7 @@ for image in imgs_atest:
     shutil.copyfile(origin, destination)
 
 # build a validation algae set of 95 imgs
-imgs_aval = imgs_algae(400:)
+imgs_aval = imgs_algae[400:]
 for image in imgs_aval:
     origin = os.path.join(img_algae_bloom, image)
     destination = os.path.join(val_algae, image)
