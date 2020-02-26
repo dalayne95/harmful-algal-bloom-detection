@@ -75,19 +75,25 @@ for image in imgs_aval:
 imgs_natrain = imgs_not_algae[:285]
 for image in imgs_natrain:
     origin = os.path.join(img_not_algae_bloom, image)
-    destination - os.path.join(imgs_natrain, image)
+    destination = os.path.join(imgs_natrain, image)
+    shutil.copyfile(origin, destination)
+
 
 #  build your test image sets for not_algae
 imgs_natest = imgs_not_algae[285:400]
 for image in imgs_natest:
     origin = os.path.join(img_not_algae_bloom, image)
-    destination - os.path.join(imgs_natest, image)
+    destination = os.path.join(imgs_natest, image)
+    shutil.copyfile(origin, destination)
+
 
 #  build your val image sets for not_algae
 imgs_naval = imgs_not_algae[400:]
 for image in imgs_naval:
     origin = os.path.join(img_not_algae_bloom, image)
     destination - os.path.join(imgs_naval, image)
+    shutil.copyfile(origin, destination)
+
 
 print('There are', len(os.listdir(train_algae)), 'algae images in the training set')
 print('There are', len(os.listdir(test_algae)), 'algae images in the test set')
