@@ -41,7 +41,7 @@ os.mkdir(train_algae)
 os.mkdir(train_not_algae)
 
 os.mkdir(test_folder)
-os.mkdir(test_not_algae)
+os.mkdir(test_algae)
 os.mkdir(test_not_algae)
 
 os.mkdir(val_folder)
