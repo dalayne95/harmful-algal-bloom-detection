@@ -1,6 +1,3 @@
-import pandas as pd
-import numpy as np
-#from PIL import image
 import os, shutil
 
 # first step is to split the data into train and test and validate sets 
