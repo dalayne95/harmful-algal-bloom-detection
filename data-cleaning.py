@@ -89,7 +89,7 @@ for image in imgs_natest:
 imgs_naval = imgs_not_algae[400:]
 for image in imgs_naval:
     origin = os.path.join(img_not_algae_bloom, image)
-    destination - os.path.join(val_not_algae, image)
+    destination = os.path.join(val_not_algae, image)
     shutil.copyfile(origin, destination)
 
 print('There are', len(os.listdir(train_algae)), 'algae images in the training set')
