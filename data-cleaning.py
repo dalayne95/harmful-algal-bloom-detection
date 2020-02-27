@@ -1,3 +1,4 @@
+import os, sys
 import numpy as np
 import pandas as pd
 #from PIL import image
@@ -6,7 +7,6 @@ import matplotlib.pyplot as plt
 import scipy
 from scipy import ndimage
 from keras.preprocessing.image import ImageDataGenerator, array_to_img, img_to_array, load_img
-from split import *
 from PIL.Image import Image
 
 # lets look at some image stats for each image to get min and max size, height, width
@@ -14,11 +14,11 @@ from PIL.Image import Image
 def get_size_stats(directory):
     heights=[]
     widths=[]
-    for image in os.listdir(directory):
-        path = os.path.join(directory, image)
-        data = np.array(Image.open(path)) # Need to get PIL working ugh 
-        heights.append(data.shape[0])
-        widths.append(data.shape[1])
+    for image in os.path.walk(directory): # os.path.walk goes into a directory and recurses into subdirectories 
+        path = os.path.join(directory, image) # os.path.join "joins path componenets intelligently" 
+        data = Image.open(path) # image.open(path) opens the image at the specified path
+        heights.append(data.shape[0]) # append the height to the heights list
+        widths.append(data.shape[1]) # append the width to the widths list
     height_avg = sum(heights) / len(heights)
     width_avg = sum(widths) / len(widths)
 
