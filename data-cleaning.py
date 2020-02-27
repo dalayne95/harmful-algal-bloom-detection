@@ -1,13 +1,13 @@
 import os
 import numpy as np
 import pandas as pd
-#from PIL import image
+import  PIL
+from PIL import image
 import time
 import matplotlib.pyplot as plt
 import scipy
 from scipy import ndimage
 from keras.preprocessing.image import ImageDataGenerator, array_to_img, img_to_array, load_img
-from PIL.Image import Image
 
 # lets look at some image stats for each image to get min and max size, height, width
 
