@@ -2,7 +2,7 @@ import os
 import numpy as np
 import pandas as pd
 import  PIL
-from PIL import image
+from PIL import Image
 import time
 import matplotlib.pyplot as plt
 import scipy
@@ -14,7 +14,7 @@ from keras.preprocessing.image import ImageDataGenerator, array_to_img, img_to_a
 def get_size_stats(DIR):
     heights=[]
     widths=[]
-    for image in os.listdir(DIR): # os.path.walk goes into a directory and recurses into subdirectories 
+    for image in os.walk(DIR): # os.path.walk goes into a directory and recurses into subdirectories 
         path = os.path.join(DIR, image) # os.path.join "joins path componenets intelligently" 
         data = np.array(Image.open(path)) # image.open(path) opens the image at the specified path
         heights.append(data.shape[0]) # append the height to the heights list
