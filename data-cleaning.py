@@ -19,8 +19,8 @@ def get_size_stats(DIR):
         data = np.array(Image.open(path)) # image.open(path) opens the image at the specified path
         heights.append(data.shape[0]) # append the height to the heights list
         widths.append(data.shape[1]) # append the width to the widths list
-    """ height_avg = sum(heights) / len(heights)
-    width_avg = sum(widths) / len(widths)
+    height_avg = heights.mean()
+    width_avg = widths.mean()
 
     print("Average Height: " + str(height_avg))
     print("Max Height: " + str(max(heights)))
@@ -28,7 +28,7 @@ def get_size_stats(DIR):
     print('\n')
     print("Average Width: " + str(width_avg))
     print("Max Width: " + str(max(widths)))
-    print("Min Width: " + str(min(widths))) """
+    print("Min Width: " + str(min(widths)))
 
 
 
