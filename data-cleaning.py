@@ -11,12 +11,12 @@ from PIL.Image import Image
 
 # lets look at some image stats for each image to get min and max size, height, width
 
-def get_size_stats(directory):
+def get_size_stats(dir):
     heights=[]
     widths=[]
-    for image in os.path.walk(directory): # os.path.walk goes into a directory and recurses into subdirectories 
-        path = os.path.join(directory, image) # os.path.join "joins path componenets intelligently" 
-        data = Image.open(path) # image.open(path) opens the image at the specified path
+    for image in os.path.walk(dir): # os.path.walk goes into a directory and recurses into subdirectories 
+        path = os.path.join(dir, image) # os.path.join "joins path componenets intelligently" 
+        data = np.array(Image.open(path)) # image.open(path) opens the image at the specified path
         heights.append(data.shape[0]) # append the height to the heights list
         widths.append(data.shape[1]) # append the width to the widths list
     height_avg = sum(heights) / len(heights)
