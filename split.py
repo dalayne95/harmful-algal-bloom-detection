@@ -47,43 +47,44 @@ os.mkdir(val_not_algae)
 
 # build your train, test, and val image sets for algae  
 
+# Training: 60%, Cross validation: 20%, Testing: 20%
 # build a train algae set of 285 images 
-imgs_atrain = imgs_algae[:285]
+imgs_atrain = imgs_algae[:448]
 for image in imgs_atrain:
     origin = os.path.join(img_algae_bloom, image)
     destination = os.path.join(train_algae, image)
     shutil.copyfile(origin, destination)
 
 # build a test algae set of 115 imgs
-imgs_atest = imgs_algae[285:400]
+imgs_atest = imgs_algae[448:597]
 for image in imgs_atest:
     origin = os.path.join(img_algae_bloom, image)
     destination = os.path.join(test_algae, image)
     shutil.copyfile(origin, destination)
 
 # build a validation algae set of 95 imgs
-imgs_aval = imgs_algae[400:]
+imgs_aval = imgs_algae[597:]
 for image in imgs_aval:
     origin = os.path.join(img_algae_bloom, image)
     destination = os.path.join(val_algae, image)
     shutil.copyfile(origin, destination)
 
 #  build your train image sets for not_algae
-imgs_natrain = imgs_not_algae[:285]
+imgs_natrain = imgs_not_algae[:419]
 for image in imgs_natrain:
     origin = os.path.join(img_not_algae_bloom, image)
     destination = os.path.join(train_not_algae, image)
     shutil.copyfile(origin, destination)
 
 #  build your test image sets for not_algae
-imgs_natest = imgs_not_algae[285:400]
+imgs_natest = imgs_not_algae[419:558]
 for image in imgs_natest:
     origin = os.path.join(img_not_algae_bloom, image)
     destination = os.path.join(test_not_algae, image)
     shutil.copyfile(origin, destination)
 
 #  build your val image sets for not_algae
-imgs_naval = imgs_not_algae[400:]
+imgs_naval = imgs_not_algae[559:]
 for image in imgs_naval:
     origin = os.path.join(img_not_algae_bloom, image)
     destination = os.path.join(val_not_algae, image)
