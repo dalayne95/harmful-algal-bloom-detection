@@ -13,8 +13,7 @@ from keras.preprocessing.image import ImageDataGenerator, array_to_img, img_to_a
 import itertools
 
 
-# lets look at some image stats for each image to get min and max size, height, width
-
+# get iamge stats
 def get_img_stats(directory):
     image_list = []
     for filename in glob.glob(directory): 
@@ -27,6 +26,7 @@ def get_img_stats(directory):
         dimensions.append(image.size)
     print(min(dimensions))
 
+# plot a confusion matrix
 def plot_confusion_matrix(cm, classes,
                           normalize=False,
                           title='Confusion matrix',
@@ -60,3 +60,13 @@ def plot_confusion_matrix(cm, classes,
     plt.ylabel('True label')
     plt.xlabel('Predicted label')
     plt.tight_layout()
+
+# predict image class 
+def predict_image(model, path):
+img = load_img(path, target_size=(140, 140))
+plt.imshow(img)
+img = img_to_array(img)
+img = img/255
+img = np.expand_dims(img, axis=0)
+predict = saved_model.predict_classes(img)
+return predict
