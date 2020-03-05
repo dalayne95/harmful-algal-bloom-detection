@@ -63,10 +63,10 @@ def plot_confusion_matrix(cm, classes,
 
 # predict image class 
 def predict_image(model, path):
-img = load_img(path, target_size=(140, 140))
-plt.imshow(img)
-img = img_to_array(img)
-img = img/255
-img = np.expand_dims(img, axis=0)
-predict = saved_model.predict_classes(img)
-return predict
+    img = load_img(path, target_size=(140, 140))
+    plt.imshow(img)
+    img = img_to_array(img)
+    img = img/255
+    img = np.expand_dims(img, axis=0)
+    predict = model.predict_classes(img)
+    return predict
