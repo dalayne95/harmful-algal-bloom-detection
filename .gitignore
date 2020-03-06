@@ -127,3 +127,15 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+
+# files from project 
+algae_model_1.h5
+algae_model_2.h5
+bloom.jpg
+split/.DS_Store
+split/test/.DS_Store
+split/test/algae/.DS_Store
+split/train/.DS_Store
+split/train/algae/.DS_Store
+split/validation/.DS_Store
