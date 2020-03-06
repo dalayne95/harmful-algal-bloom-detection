@@ -10,11 +10,8 @@ Early detection of algal blooms helps scientists and local officials make public
 My goal with this project is to create a model using a Convolutional Neural Network that classifies algal blooms using publicly available imagery obtained from Google. Convolutional Neural Networks (CNN) are a kind of deep learning algorithm consisting of alternating **convolution** and **pooling** layers resulting in a fully connected layer. The **convolution layers** are what allows a CNN to detect patterns in images. Algal blooms come in all different shapes, sizes and colors, and this highly varied dataset will hopefully lead to a model that is able to classify algal blooms in all forms. 
 
 # File Directory
-[Images Folder](https://github.com/dalayne95/harmful-algal-bloom-detection/tree/master/images)
-
-[Python Functions](https://github.com/dalayne95/harmful-algal-bloom-detection/tree/master/python_files)
-
-[Train/Test/Validation Split Images](https://github.com/dalayne95/harmful-algal-bloom-detection/tree/master/split)
-
-[Technical Notebook](https://github.com/dalayne95/harmful-algal-bloom-detection/blob/master/technical_notebook.ipynb)
+- [Images Folder](https://github.com/dalayne95/harmful-algal-bloom-detection/tree/master/images)
+- [Python Functions](https://github.com/dalayne95/harmful-algal-bloom-detection/tree/master/python_files)
+- [Train/Test/Validation Split Images](https://github.com/dalayne95/harmful-algal-bloom-detection/tree/master/split)
+- [Technical Notebook](https://github.com/dalayne95/harmful-algal-bloom-detection/blob/master/technical_notebook.ipynb)
 
