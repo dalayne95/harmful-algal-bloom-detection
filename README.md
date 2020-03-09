@@ -15,4 +15,5 @@ My goal with this project is to create a model using a Convolutional Neural Netw
 - [Python Functions](https://github.com/dalayne95/harmful-algal-bloom-detection/tree/master/python_files)
 - [Train/Test/Validation Split Images](https://github.com/dalayne95/harmful-algal-bloom-detection/tree/master/split)
 - [Technical Notebook](https://github.com/dalayne95/harmful-algal-bloom-detection/blob/master/technical_notebook.ipynb)
+- [Presentation Slides](https://github.com/dalayne95/harmful-algal-bloom-detection/blob/master/Detection%20of%20Algal%20Blooms.pdf)
 
